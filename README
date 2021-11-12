@@ -1,3 +1,14 @@
+patch -p1 < zst.patch
+apt install autoconf autopoint libtool-bin
+aclocal && automake --add-missing 
+./autogen
+./configure
+make
+make install
+
+
+
+
 dpkg - Debian's package maintenance system
 
 The primary interface for the dpkg suite is the ‘dselect’ program;
